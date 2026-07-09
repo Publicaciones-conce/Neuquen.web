@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Camila & Mauro · 07 Marzo 2027</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <!-- Estilos propios -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- Capa de confeti dorado -->
+    <div id="petals-container"></div>
+
+    <!-- ======================== -->
+    <!-- 1. HERO                 -->
+    <!-- ======================== -->
+    <section id="hero">
+        <div class="hero-overlay">
+            <span class="hero-subtitle">Nos casamos</span>
+            <h1 class="hero-title">Camila <span class="ampersand">&</span> Mauro</h1>
+            <p class="hero-date">07 de Marzo, 2027</p>
+            <p class="hero-location"><i class="fas fa-map-pin"></i> Zaita Eventos, Cipolletti</p>
+
+            <div class="countdown" id="countdown">
+                <div class="countdown-item">
+                    <span class="countdown-number" id="days">00</span>
+                    <span class="countdown-label">Días</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="hours">00</span>
+                    <span class="countdown-label">Horas</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="minutes">00</span>
+                    <span class="countdown-label">Minutos</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="seconds">00</span>
+                    <span class="countdown-label">Segundos</span>
+                </div>
+            </div>
+
+            <a href="#details" class="btn-gold">Abrir invitación <i class="fas fa-arrow-down"></i></a>
+        </div>
+    </section>
+
+ <!-- ======================== -->
+<!-- 2. MENSAJE Y CITAS       -->
+<!-- ======================== -->
+<section id="message" class="section">
+    <div class="container">
+        <!-- Corazones flotantes de fondo -->
+<div class="hearts-container">
+    <span class="heart">💜</span>
+    <span class="heart">❤️</span>
+    <span class="heart">💛</span>
+    <span class="heart">💜</span>
+    <span class="heart">❤️</span>
+    <span class="heart">💛</span>
+    <span class="heart">💜</span>
+    <span class="heart">❤️</span>
+</div>
+        <div class="message-card">
+            <p class="message-intro">Nos encantaría compartir este día tan especial junto a ustedes.</p>
+            
+            <div class="message-images">
+                <div class="message-image-item">
+                    <img src="archivos/imagenes/imagen1.jpeg" alt="Camila y Mauro - Foto 1" />
+                </div>
+                <div class="message-image-item">
+                    <img src="archivos/imagenes/imagen2.jpeg" alt="Camila y Mauro - Foto 2" />
+                </div>
+                <div class="message-image-item">
+                    <img src="archivos/imagenes/imagen3.jpeg" alt="Camila y Mauro - Foto 3" />
+                </div>
+            </div>
+
+            <p class="message-text">
+                Dios ha guiado nuestros caminos y hoy nos concede la alegría de comenzar una nueva etapa juntos, uniendo nuestras vidas para formar una familia fundada en el amor, la fe y su bendición.
+            </p>
+
+            <blockquote class="message-quote">
+                <i class="fas fa-quote-left"></i>
+                "Más valen dos que uno, porque obtienen más fruto de su esfuerzo. Si caen, el uno levanta al otro. ¡Ay del que cae y no tiene quien lo levante!"
+                <span>Eclesiastés 4:9-10 (NVI)</span>
+            </blockquote>
+
+            <p class="message-celebrate">Celebra con nosotros nuestro amor</p>
+        </div>
+    </div>
+</section>
+    <!-- ======================== -->
+    <!-- 3. DETALLES DEL EVENTO   -->
+    <!-- ======================== -->
+    <section id="details" class="section">
+        <div class="container">
+            <h2 class="section-title">Fechas importantes</h2>
+            
+            <div class="details-grid">
+                <!-- Ceremonia Civil -->
+                <div class="detail-card" data-delay="0">
+                    <i class="fas fa-gavel detail-icon"></i>
+                    <h3>Ceremonia Civil</h3>
+                    <p class="detail-time">15 de Enero, 2027</p>
+                    <p class="detail-address">Concepción, Tucumán</p>
+                    <span class="detail-tag">Civil</span>
+                </div>
+                
+                <!-- Ceremonia Religiosa y Recepción -->
+                <div class="detail-card" data-delay="200">
+                    <i class="fas fa-church detail-icon"></i>
+                    <h3>Ceremonia Religiosa</h3>
+                    <p class="detail-time">07 de Marzo, 2027 · 19:00 hs</p>
+                    <p class="detail-address">Zaita Eventos, Cipolletti</p>
+                    <a href="https://maps.app.goo.gl/pMKXopAbt4xSG7Hc6" target="_blank" class="detail-map">
+                        <i class="fas fa-map-marker-alt"></i> Ver en mapa
+                    </a>
+                </div>
+            </div>
+
+            <!-- Información de Recepción -->
+            <div class="reception-info">
+                <div class="detail-card" data-delay="400">
+                    <i class="fas fa-glass-cheers detail-icon"></i>
+                    <h3>Recepción</h3>
+                    <p class="detail-time">07 de Marzo, 2027 · 19:00 hs - 02:00 am</p>
+                    <p class="detail-address">Zaita Eventos</p>
+                    <p class="detail-address-small">Av. Julio Dante Santos /n (camino a la Isla Jordán, a 70 km de Ruta 22) · Río Negro</p>
+                    <a href="https://maps.app.goo.gl/pMKXopAbt4xSG7Hc6" target="_blank" class="detail-map">
+                        <i class="fas fa-map-marker-alt"></i> Ver en mapa
+                    </a>
+                </div>
+            </div>
+
+            <!-- Información de Tarjetas -->
+            <div class="ticket-info">
+                <div class="ticket-box">
+                    <div class="ticket-item">
+                        <i class="fas fa-user"></i>
+                        <h4>Adultos</h4>
+                        <p>Valor de la tarjeta: <strong>$40.000</strong> por adulto</p>
+                    </div>
+                    <div class="ticket-item">
+                        <i class="fas fa-child"></i>
+                        <h4>Niños</h4>
+                        <p>Los niños <strong>no abonan</strong> tarjeta</p>
+                    </div>
+                </div>
+                <div class="ticket-deadline">
+                    <p><i class="fas fa-calendar-alt"></i> Confirmar asistencia y realizar el pago antes del <strong>27 de Noviembre, 2026</strong></p>
+                    <a href="#" class="btn-gold btn-small">Link de pago</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== -->
+    <!-- 4. RSVP (Confirmación)   -->
+    <!-- ======================== -->
+    <section id="rsvp" class="section">
+    <div class="container">
+        <h2 class="section-title">Confirmar asistencia</h2>
+        <p class="rsvp-subtitle">Confirma tu asistencia antes del 27 de noviembre de 2026</p>
+        
+        <!-- Formulario con Google Sheets -->
+        <form id="rsvp-form" 
+              action="https://script.google.com/macros/s/AKfycbxKjghtaVgmZm2lbkblH8uoX4Lcy-1LgHnTvjY1CThh5eHcNdxhPeDeOsQ8IMM-Fabg/exec" 
+              method="POST">
+            
+            <div class="form-group">
+                <label for="name">Nombre completo (Familia)</label>
+                <input type="text" id="name" name="nombre" placeholder="Ej: Camila Pérez" required />
+            </div>
+
+            <div class="form-group">
+                <label for="cantidad">Total de invitados (incluyéndote)</label>
+                <select id="cantidad" name="cantidad">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="ninos">Cantidad de niños (menores de 12 años)</label>
+                <select id="ninos" name="ninos">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn-gold btn-large">Confirmar asistencia</button>
+        </form>
+
+        <div id="rsvp-success" class="hidden">
+            <i class="fas fa-check-circle"></i>
+            <h3>¡Gracias por confirmar!</h3>
+            <p>Los esperamos el 07 de marzo 💜</p>
+            <p class="success-contact">Cualquier duda contactar: <strong>+54 9 2996 09-6171</strong></p>
+        </div>
+    </div>
+</section>
+    <!-- ======================== -->
+    <!-- 5. FOOTER               -->
+    <!-- ======================== -->
+    <footer id="footer">
+        <div class="container">
+            <p class="footer-heart">¡Los esperamos!</p>
+            <p class="footer-text">Tu presencia es muy importante para nosotros</p>
+            <p class="footer-contact">
+                <i class="fas fa-phone"></i> +54 9 2996 09-6171
+            </p>
+            <button id="whatsapp-share" class="btn-whatsapp">
+                <i class="fab fa-whatsapp"></i> Compartir por WhatsApp
+            </button>
+            <p class="footer-copy">Camila & Mauro · 07 de marzo de 2027 · Zaita Eventos, Cipolletti</p>
+            <p class="footer-copy-small">© 2026 · Hecho con amor 💜</p>
+        </div>
+    </footer>
+
+    <!-- ======================== -->
+    <!-- REPRODUCTOR DE AUDIO     -->
+    <!-- ======================== -->
+    <div id="audio-player">
+        <audio id="bg-audio" loop>
+            <source src="audio/cancion.mp3" type="audio/mpeg">
+            <!-- Si no tienes audio, usa esta URL de prueba -->
+            <!-- <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg"> -->
+            Tu navegador no soporta audio.
+        </audio>
+        <button id="audio-toggle">
+            <i class="fas fa-play"></i>
+        </button>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
