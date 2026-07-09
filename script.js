@@ -127,7 +127,7 @@
         const formData = new FormData(form);
         const data = {
             nombre: formData.get('nombre'),
-            cantidad: formData.get('cantidad'),
+            cantidad: formData.get('cantidad'),  // ✅ CAMBIADO
             ninos: formData.get('ninos')
         };
 
@@ -135,7 +135,7 @@
             method: 'POST',
             body: JSON.stringify(data),
             headers: {
-                'Content-Type': 'text/plain'
+                'Content-Type': 'text/plain'   // ✅ CLAVE para CORS
             }
         })
         .then(response => response.json())
@@ -145,11 +145,11 @@
                 successDiv.classList.remove('hidden');
                 form.reset();
             } else {
-                alert('Hubo un problema al enviar tu confirmación. Por favor, intenta de nuevo.');
+                alert('Hubo un problema al enviar tu confirmación.');
             }
         })
         .catch(error => {
-            alert('Error de conexión. Por favor, verifica tu internet e intenta de nuevo.');
+            alert('Error de conexión.');
         });
     });
 }
