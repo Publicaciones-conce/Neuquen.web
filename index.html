@@ -255,18 +255,13 @@
     <!-- ======================== -->
     <!-- REPRODUCTOR DE AUDIO     -->
     <!-- ======================== -->
-    <div id="audio-player">
-        <audio id="bg-audio" loop>
-            <source src="archivos/audio/Ed Sheeran" type="audio/mpeg">
-            <!-- Si no tienes audio, usa esta URL de prueba -->
-            <!-- <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg"> -->
-            Tu navegador no soporta audio.
-        </audio>
-        <button id="audio-toggle">
-            <i class="fas fa-play"></i>
-        </button>
-    </div>
-
+   <audio id="bg-audio" loop>
+    <!-- Ruta ANTES (INCORRECTA) -->
+    <!-- <source src="audio/Ed Sheeran.mp3" type="audio/mpeg"> -->
+    
+    <!-- Ruta AHORA (CORRECTA) -->
+    <source src="archivos/audio/Ed Sheeran.mp3" type="audio/mpeg">
+</audio>
     <!-- Scripts -->
     <script src="script.js"></script>
 </body>
