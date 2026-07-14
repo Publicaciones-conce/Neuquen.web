@@ -177,50 +177,54 @@
     // =========================================
     // 7. CONTROL DEL AUDIO
     // =========================================
-    function initAudio() {
-        const audio = document.getElementById('bg-audio');
-        const toggleBtn = document.getElementById('audio-toggle');
-        let isPlaying = false;
+    // =========================================
+// CONTROL DEL AUDIO (autoplay al primer clic)
+// =========================================
+function initAudio() {
+    const audio = document.getElementById('bg-audio');
+    const toggleBtn = document.getElementById('audio-toggle');
+    let isPlaying = false;
 
-        if (!audio || !toggleBtn) return;
+    if (!audio || !toggleBtn) return;
 
-        function playAudio() {
-            audio.play().then(() => {
-                isPlaying = true;
-                toggleBtn.innerHTML = '<i class="fas fa-pause"></i>';
-            }).catch(() => {
-                toggleBtn.innerHTML = '<i class="fas fa-play"></i>';
-            });
-        }
-
-        function pauseAudio() {
-            audio.pause();
-            isPlaying = false;
-            toggleBtn.innerHTML = '<i class="fas fa-play"></i>';
-        }
-
-        toggleBtn.addEventListener('click', function() {
-            if (isPlaying) {
-                pauseAudio();
-            } else {
-                playAudio();
-            }
-        });
-
-        // Autoplay al primer clic en cualquier parte
-        document.addEventListener('click', function playOnFirstClick() {
-            if (!isPlaying) {
-                playAudio();
-            }
-            document.removeEventListener('click', playOnFirstClick);
-        }, { once: true });
-
-        // No se repite (se detiene al terminar)
-        audio.addEventListener('ended', function() {
-            isPlaying = false;
+    function playAudio() {
+        audio.play().then(() => {
+            isPlaying = true;
+            toggleBtn.innerHTML = '<i class="fas fa-pause"></i>';
+        }).catch(() => {
             toggleBtn.innerHTML = '<i class="fas fa-play"></i>';
         });
     }
+
+    function pauseAudio() {
+        audio.pause();
+        isPlaying = false;
+        toggleBtn.innerHTML = '<i class="fas fa-play"></i>';
+    }
+
+    // Control manual con el botón
+    toggleBtn.addEventListener('click', function() {
+        if (isPlaying) {
+            pauseAudio();
+        } else {
+            playAudio();
+        }
+    });
+
+    // ⭐ AUTOPLAY: se reproduce al primer clic en cualquier parte de la página ⭐
+    document.addEventListener('click', function playOnFirstClick() {
+        if (!isPlaying) {
+            playAudio();
+        }
+        document.removeEventListener('click', playOnFirstClick);
+    }, { once: true });
+
+    // Cuando el audio termina, se detiene y el botón vuelve a play
+    audio.addEventListener('ended', function() {
+        isPlaying = false;
+        toggleBtn.innerHTML = '<i class="fas fa-play"></i>';
+    });
+}
 
     // =========================================
     // 8. INICIALIZAR TODO
