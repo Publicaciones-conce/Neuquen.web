@@ -225,7 +225,31 @@ function initAudio() {
         toggleBtn.innerHTML = '<i class="fas fa-play"></i>';
     });
 }
+// =========================================
+// AVISO DE AUDIO (desaparece en 30 segundos)
+// =========================================
+function initAudioNotification() {
+    const notification = document.getElementById('audio-notification');
+    if (!notification) return;
 
+    // Ocultar automáticamente después de 30 segundos
+    setTimeout(() => {
+        notification.classList.add('hidden');
+    }, 30000); // 30 segundos
+
+    // Opcional: ocultar también si el usuario hace clic en el botón de audio
+    const toggleBtn = document.getElementById('audio-toggle');
+    if (toggleBtn) {
+        toggleBtn.addEventListener('click', function() {
+            notification.classList.add('hidden');
+        });
+    }
+
+    // Opcional: ocultar si el usuario hace clic en cualquier parte (autoplay)
+    document.addEventListener('click', function() {
+        notification.classList.add('hidden');
+    }, { once: true });
+}
     // =========================================
     // 8. INICIALIZAR TODO
     // =========================================
@@ -237,6 +261,7 @@ function initAudio() {
         initRSVP();
         initWhatsAppShare();
         initAudio();
+        initAudioNotification();
     });
 
 })();
