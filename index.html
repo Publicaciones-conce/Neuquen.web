@@ -255,12 +255,14 @@
     <!-- ======================== -->
     <!-- REPRODUCTOR DE AUDIO     -->
     <!-- ======================== -->
-   <audio id="bg-audio" loop>
-    <!-- Ruta ANTES (INCORRECTA) -->
-    <!-- <source src="audio/Ed Sheeran.mp3" type="audio/mpeg"> -->
-    
-    <!-- Ruta AHORA (CORRECTA) -->
-    <source src="archivos/audio/Ed Sheeran.mp3" type="audio/mpeg">
+   <div id="audio-player">
+    <audio id="bg-audio" preload="auto">
+        <source src="archivos/audio/Ed Sheeran.mp3" type="audio/mpeg">
+    </audio>
+    <button id="audio-toggle">
+        <i class="fas fa-play"></i>
+    </button>
+</div>
 </audio>
     <!-- Scripts -->
     <script src="script.js"></script>
